@@ -1,0 +1,127 @@
+body{background-color:#f9f9f9;}
+.page-container {
+  
+}
+
+
+/*
+   this is important!
+   make sure you define this here
+   or in jQuery codef
+*/
+.resizer {
+  position: absolute;
+  top: 0;
+  right: -8px;
+  bottom: 0;
+  left: auto;
+  width: 16px;    
+  cursor: col-resize;       
+}
+
+
+.greensq{color:green;}
+.redsq{color:red;}
+a{color:#666666;text-decoration:underline;}
+a:hover{color:#000;text-decoration:none;}
+
+.resbus strong{color:red;}
+.container-fluid{padding:25px !important;}
+.cambiosizefont{font-size:14px;}
+.cambiosizefont h4{color:#3863C7;font-size:16px;border-bottom:1px dotted #cccccc;padding-bottom:5px;margin-bottom:8px;}
+.cambiosizefont p{margin:0px;padding:0px;margin-bottom:4px;}
+.cambiosizefont .row{margin-bottom:15px;}
+.cambiosizefont strong{color:#666666;}
+.cambiosizefont .table th,td{font-size:13px;}
+
+.card-block .dropdown{display:inline;}
+.card-block .dropdown a{text-decoration:none;font-size:13px;}
+.card-block .dropdown a:hover{text-decoration:underline;}
+.rojo{color:red}
+.badge{font-weight:normal;}
+.mayusc{text-transform:uppercase;font-weight:bold;padding:3px;}
+
+.error{color:red;}
+#formuperiodonuevo label{font-weight:bold;}
+
+
+.yexxg .fa-calendar-o{font-size:22px;padding-left:4px;}
+      
+.cambiosizefont .card-block{background-color:#ffffff;
+}
+.camemb i{color:green;}
+
+
+.nav-tabs
+ {
+   border-color:1px solid #DEE2E6 !important;
+   width:100%;
+ }
+
+.nav-tabs > li a { 
+    border: 1px solid #DEE2E6;
+    background-color:#DEE2E6; 
+    color:#333333;
+	text-decoration:none;
+    }
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover{
+    background-color:#DEE2E6;
+    color:#000;
+    border: 1px solid #DEE2E6;
+    border-bottom-color: transparent;
+    }
+
+.nav-tabs > li > a:hover{
+  background-color: #ffffff !important;
+    border-radius: 5px;
+    color:#000;
+
+} 
+
+.tab-pane {
+    border:solid 1px #DEE2E6;
+    border-top: 0; 
+    width:100%;
+    background-color:#ffffff;
+    padding:5px;
+
+}
+
+.navbar-nav>li{
+  border-right: 1px solid #cccccc;
+}
+
+.navbar-nav>li:last-child{
+   border: none;
+}
+
+.modal-lg {
+    max-width: 50% !important;
+}
+
+.imagenlogo{max-height:50px;margin-right:25px;}
+
+   .navbar-blanca{ background-color:#ffffff;border-bottom:1px solid #cccccc;}
+      .navbar-blanca a{text-decoration:none;}
+
+   .ttiop{margin-top:30px;}
+   
+.thj h6{font-size:14px;}
+
+.verde{color:green;}
+.amarillo{color:#f2d710;}
+.rojo{color:red;}
+.azul{color:blue;}
+ #datetimepicker1{border:1px solid #cccccc;padding:8px !important;}  
+ 
+.altal .form-control{width:70%;float:right;} 
+
+ 
+td:first-child  {}
+td:nth-child(2) {}
+td:nth-child(3) {}
+td:nth-child(4) {}
+td:nth-child(5) {}

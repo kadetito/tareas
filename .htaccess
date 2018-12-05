@@ -1,0 +1,92 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /tareas
+
+
+
+Rewriterule ^(.*)/*(css|Fotos|docs|im|img|js|fonts|estils|estructura|files)/(.*)$  $2/$3      [NC,L]
+
+
+
+
+RewriteRule ^([0-9a-z_-]+)/?$ ?idioma=$1 [NC,L]
+
+
+
+RewriteRule ^([0-9a-z_-]+)/obtencion?$ obtencion_datos.php?getId=$1  [L]
+RewriteRule ^([0-9a-z_-]+)/test?$ test.php?getId=$1  [L]
+RewriteRule ^([0-9a-z_-]+)/index?$ index.php?getId=$1  [L]
+RewriteRule ^([0-9a-z_-]+)/logout$         logout.php?getId=$1 [L]
+RewriteRule ^([0-9a-z_-]+)/config?$ configuracion.php?idioma=$1&letra=$2 [L]
+RewriteRule ^([0-9a-z_-]+)/nuevo_proyecto?$ nuevo_proyecto.php?idioma=$1&otraletra=$2 [L]
+RewriteRule ^([0-9a-z_-]+)/nueva_issue?$ nuevo_issue.php?idioma=$1&otraletraissue=$2 [L]
+
+# usar la siguiente linea cuando se vaya a crear una issue proveniente de un proeycto
+ RewriteRule ^([0-9a-z_-]+)/nueva_issue/([^/]*)?$ nuevo_issue.php?idioma=$1&iddelproyecto=$2 [L]
+
+
+RewriteRule ^([0-9a-z_-]+)/test?$ test.php?idioma=$1&otlf45334=$2 [L]
+RewriteRule ^([0-9a-z_-]+)/([0-9a-z_-]+)/listaproyectos?$ lista_proyectos.php?idioma=$1&otlf234=$2 [L]
+RewriteRule ^([0-9a-z_-]+)/([0-9a-z_-]+)/listaissues?$ lista_issues.php?idioma=$1&rtlf234=$2 [L]
+
+RewriteRule ^([0-9a-z_-]+)/([^/]*)$ detalle.php?idioma=$1&idtarea=$2 [NC,QSA,L]
+RewriteRule ^([0-9a-z_-]+)/([^/]*)/([0-9a-z_-]+)/([^/]*)$ perfil.php?idioma=$1&pidentif=$2&perf=$3&user=$4 [NC,L]
+RewriteRule ^([0-9a-z_-]+)/([^/]*)/p$ detalle_proyecto.php?idioma=$1&id_proyecto=$2 [NC,L]
+
+
+
+ErrorDocument 404 /404.php
+
+
+
+<IfModule mod_expires.c>
+
+ExpiresActive On
+
+ExpiresByType image/jpg "access 1 year"
+
+ExpiresByType image/jpeg "access 1 year"
+
+ExpiresByType image/gif "access 1 year"
+
+ExpiresByType image/png "access 1 year"
+
+ExpiresByType text/css "access 1 month"
+
+ExpiresByType text/html "access 1 month"
+
+ExpiresByType application/pdf "access 1 month"
+
+ExpiresByType text/x-javascript "access 1 month"
+
+ExpiresByType application/x-shockwave-flash "access 1 month"
+
+ExpiresByType image/x-icon "access 1 year"
+
+ExpiresDefault "access plus 1 month"
+
+</IfModule>
+
+<IfModule mod_deflate.c>
+# Insert filters
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/x-httpd-php
+AddOutputFilterByType DEFLATE application/x-httpd-fastphp
+AddOutputFilterByType DEFLATE image/svg+xml
+
+# Drop problematic browsers
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+
+# Make sure proxies don't deliver the wrong content
+Header append Vary User-Agent env=!dont-vary
+</IfModule>
